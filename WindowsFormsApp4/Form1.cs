@@ -22,7 +22,8 @@ namespace WindowsFormsApp4
             double x = Convert.ToDouble(textBox1.Text);
             double y = Convert.ToDouble(textBox2.Text);
             double r = Convert.ToDouble(textBox3.Text);
-            if (x >= 0 && Math.Pow(x, 2) + Math.Pow(y, 2) <= Math.Pow(r, 2) || x < 0 && y <= r && y >= Math.Abs(x))
+            if (x >= 0 && Math.Pow(x, 2) + Math.Pow(y, 2) <= Math.Pow(r, 2) ||
+                x <= 0 && r >= y && y >= x && -r <= y && y <= x)
             {
                 MessageBox.Show("Точка попадает в закрашенную область");
             } else
